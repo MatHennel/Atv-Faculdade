@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.security.Principal;
-
 public class Atividade1 
 {
     public static void main(String [] args)
