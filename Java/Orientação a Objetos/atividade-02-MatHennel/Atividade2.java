@@ -5,7 +5,7 @@ public class Atividade2
 
     public static int invalido(int num, int[] vetor, Scanner leia, int i) 
     {
-        if (num < -1) 
+        if (num < -1 || num == 0) 
         {
             do 
             {
@@ -13,7 +13,7 @@ public class Atividade2
                 num = leia.nextInt();
                 vetor[i] = num;
 
-            } while (num < -1);
+            } while (num < -1 || num == 0);
 
         }
         return num;
@@ -27,6 +27,7 @@ public class Atividade2
         int i = 0;
         Scanner leia = new Scanner(System.in);
         System.out.println("Digite numeros para o vetor: ");
+        
 
         do 
         {
@@ -36,8 +37,9 @@ public class Atividade2
             {
                 vetor[i] = num;
                 i++;
+            
             }
-
+            
         } while (num != -1);
 
         int menor = vetor[0];
@@ -69,14 +71,17 @@ public class Atividade2
 
         System.out.print("\nSeu vetor é: ");
 
-        for(int j = 0;j < vetor.length;j++)
-        {
-            if(vetor[j] != 0)
+        
+            for(int j = 0;j < vetor.length;j++)
             {
-                System.out.print(vetor[j] + " ");
+                if(vetor[j] != 0)
+                {
+                    System.out.print(vetor[j] + " ");
+                }
+               
             }
             
-        }
+        
 
         System.out.println("\nMaior numero: " + maior);
         System.out.println("Menor numero: " + menor);
