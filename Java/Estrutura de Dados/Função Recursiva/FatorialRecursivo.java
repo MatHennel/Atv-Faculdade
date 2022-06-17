@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//fatorial recursivo
 public class FatorialRecursivo {
     public static void main(String[] args) {
         int num = 0;
