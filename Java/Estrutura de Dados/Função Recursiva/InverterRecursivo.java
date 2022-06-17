@@ -14,13 +14,11 @@ public class InverterRecursivo {
 
     public static int inverte(int num, int total) {
 
-        
         if (num == 0) {
             return total;
         }
 
         total = total * 10 + num % 10;
-
 
         return inverte(num / 10, total);
     }
