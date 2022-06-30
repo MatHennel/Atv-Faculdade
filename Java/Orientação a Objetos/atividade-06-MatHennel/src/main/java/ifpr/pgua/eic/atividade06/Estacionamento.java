@@ -45,7 +45,7 @@ public class Estacionamento {
 
         for(int i = 0;i < veiculos.size();i++){
             if(placa.equals(veiculos.get(i).getPlaca()) && veiculos.get(i).isEstaEstacionado()){
-                
+                veiculos.get(i).registraSaida();
                 return totalMinutos;
             }
         }
@@ -74,6 +74,13 @@ public class Estacionamento {
         }
 
         return null;
+    }
+
+    public String toString(){
+        
+        String str = "";
+
+        return str;
     }
 
     public ArrayList<Veiculo> listaTodosVeiculos(){

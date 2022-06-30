@@ -92,4 +92,15 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+
+    public String toString(){
+        String str = "[Placa: " + placa;
+        str += "/ Modelo: " + modelo;
+        str += "/ Fabricante: " + fabricante;
+        str += "/ Ano: " + anoFabricacao;
+        str += "/ Cor: " + cor +  "]";
+
+
+        return str;
+    }
 }
