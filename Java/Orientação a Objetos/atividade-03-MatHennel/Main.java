@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 
 
@@ -8,6 +12,12 @@ public class Main {
 
         ContaCorrente conta = new ContaCorrente(29292929,543,true);
         Pessoa pessoa = new Pessoa();
+
+        JFrame janela = new JFrame();
+        JLabel label = new JLabel("Conta criada com sucesso!",JLabel.CENTER);
+        //label.setFont(new Font("Calibri",Font.BOLD, 50));
+
+       
 
         
 
@@ -25,7 +35,7 @@ public class Main {
             switch (op) {
                 case 1:
 
-                    cadastro(pessoa, conta, ler);
+                    cadastro(pessoa, conta, ler,janela,label);
                     
                     break;
 
@@ -81,7 +91,7 @@ public class Main {
         }
     }
 
-    public static void cadastro(Pessoa pessoa, ContaCorrente conta, Scanner ler) {
+    public static void cadastro(Pessoa pessoa, ContaCorrente conta, Scanner ler,JFrame janela,JLabel label) {
         System.out.println(" \t------------ Cadastro ------------ ");
         System.out.print(" \tDigite seu nome: ");
         System.out.print("");
@@ -97,6 +107,9 @@ public class Main {
         conta.primeiroDeposito(pessoa.getSalario());
         System.out.print(" \tDigite a senha: ");
         conta.setSenha(ler.next());
+        janela.setSize(200,100);
+        janela.add(label);
+        janela.setVisible(true);
     }
 
     public static void printConta(ContaCorrente conta){
