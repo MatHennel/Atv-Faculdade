@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox alignment="CENTER" 
+    spacing="5.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="ifpr.pgua.eic.listatelefonica.controllers.JanelaCadastro"
+>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <VBox spacing="5.0">    
+
+        <Label text="Nome"/>
+        <TextField fx:id = "tfNome"/>
+
+        <Label text="Telefone"/>
+        <TextField fx:id = "tfTelefone"/>
+
+        <Label text="Email"/>
+        <TextField fx:id = "tfEmail"/>
+
+
+
+        <HBox>
+            <Button text="Cadastrar"  onAction="#cadastrar"/>
+        </HBox>
+    </VBox>
+
+
+
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+
+
+<VBox alignment="CENTER" 
+    spacing="5.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="ifpr.pgua.eic.listatelefonica.controllers.Listar"
+>
+    <HBox spacing="5.0">
+      <TextField fx:id="tfBusca" prefWidth="264.0"/>
+      <Button text="Buscar" onAction="#buscar"/>
+    </HBox>
+
+     <ListView fx:id="listView" onMouseClicked="#mostrarDetalhes" prefHeight="350.0"/>
+     <VBox spacing="10.0">
+        <TextArea fx:id="taDetalhes" editable="false"/>
+      </VBox>
+
+
+
+
+
+
+</VBox>
