@@ -31,7 +31,7 @@ public class JanelaCadastro {
         String email = tfEmail.getText();
 
         if (contato.adicionarContato(nome, telefone, email) || nome == null || telefone == null) {
-            System.out.println(contato.getContatos());
+            
             Alert alert = new Alert(AlertType.INFORMATION, "Cadastro realizado");
             alert.showAndWait();
             limpar();
