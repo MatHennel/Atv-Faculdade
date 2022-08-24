@@ -9,14 +9,21 @@
 <?import javafx.geometry.Insets?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx" 
+<BorderPane fx:id="BorderPane" xmlns="http://javafx.com/javafx" 
       xmlns:fx="http://javafx.com/fxml" 
       prefHeight="400" prefWidth="600"
       fx:controller="ifpr.pgua.eic.listatelefonica.controllers.JanelaPrincipal"
+      stylesheets = "@css/style.css"
       >
    <padding>
       <Insets topRightBottomLeft="20"/>
    </padding>
+
+   <top>
+         <Button styleClass="botaoModo" onAction="#mudarTema"/>
+   </top>
+
+   
 
    <left>
          <VBox spacing="5.0" alignment="CENTER">
@@ -24,6 +31,7 @@
                <Insets topRightBottomLeft="20"/>
             </padding>
          
+            
             <Button text="Cadastrar" prefWidth="200" onAction= "#cadastro"/>
             <Button text="Listar" prefWidth="200" onAction="#listar"/>
          </VBox>

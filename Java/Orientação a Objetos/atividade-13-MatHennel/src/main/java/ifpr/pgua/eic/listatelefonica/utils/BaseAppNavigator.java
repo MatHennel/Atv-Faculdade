@@ -50,6 +50,7 @@ public abstract class BaseAppNavigator extends Application {
 
         this.palco.setScene(cena);
         this.palco.setResizable(false);
+        this.palco.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/5341/5341889.png"));
         this.palco.setTitle(getAppTitle());
         this.palco.show();
     }

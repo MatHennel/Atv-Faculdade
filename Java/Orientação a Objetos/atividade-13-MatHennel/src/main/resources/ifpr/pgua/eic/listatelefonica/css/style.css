@@ -1,0 +1,42 @@
+*{
+    
+    -fx-text-fill: black;
+}
+
+.button{
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+    
+    -fx-background-radius: 20;
+    
+
+}
+
+
+.button:hover{
+    -fx-background-color: rgb(160, 160, 160);
+}
+
+#BorderPane {
+    -fx-background-color: linear-gradiente(rgb(136, 148, 250),rgb(122, 255, 237));
+}
+
+.botaoModo{
+    -fx-background-image: url("https://cdn-icons-png.flaticon.com/512/7905/7905053.png");
+    
+    
+    -fx-background-size: contain;
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+    -fx-background-radius: 50;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-border-radius: 50;
+    
+    
+    
+}
