@@ -3,6 +3,8 @@ package ifpr.pgua.eic.listatelefonica.models;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.text.Normalizer;
+import java.util.regex.Pattern;
 
 public class ListaTelefonica {
     
@@ -70,7 +72,11 @@ public class ListaTelefonica {
      * @return Lista com contatos que possuem o inicio passado por parâmetro.
      */
     public List<Contato> buscaPorNome(String inicio){
-        return contatos.stream().filter((contato)->contato.getNome().startsWith(inicio)).collect(Collectors.toList());
+        return contatos.stream().filter((contato)->removerAcentos(contato.getNome()).toUpperCase().startsWith(removerAcentos(inicio.toUpperCase()))).collect(Collectors.toList());
+    }
+
+    public static String removerAcentos(String str) {
+        return Normalizer.normalize(str, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
     }
 
 }
